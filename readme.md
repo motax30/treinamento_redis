@@ -1,8 +1,6 @@
 # Redis - Um banco de dados em memória para diversos propósitos
 
-
 ## O que é o Redis
-
 
 * O Redis é um **[banco de dados](https://rockcontent.com/br/blog/banco-de-dados/) relacional** de código aberto, que tem como uma de suas principais características o fato de estruturar informações em sua memória.
 * Altamente versátil, **o Redis pode ser usado em projetos complexos de TI** que contemplem aplicações web, softwares internos de uma empresa, além de uma série de outras possibilidades.
@@ -10,7 +8,6 @@
 * Um dos fatores mais importantes quanto ao Redis é o fato de ele ser um sistema voltado para o **armazenamento e o processamento mais dinâmico e ágil.**
 * Consegue processar dados em uma velocidade muito mais alta do que outras aplicações.
 * É um banco de dados capaz de performar bem, mesmo com alto volume de informações.
-
 
 Em sua utilidade, o Redis pode suportar diferentes estruturas de dados, entre eles:
 
@@ -26,14 +23,9 @@ Em sua utilidade, o Redis pode suportar diferentes estruturas de dados, entre el
 
 Um dos fatores mais importantes quanto ao Redis é o fato de ele ser um sistema voltado para o **armazenamento e o processamento mais dinâmico e ágil**. Isso significa que ele consegue processar dados em uma velocidade muito mais alta do que outras aplicações. Na prática, o Redis se torna um banco de dados capaz de desempenhar bem, mesmo com alto volume de informações.
 
-
 ## Como ele funciona
 
 Para ser capaz de funcionar com armazenamento em alta velocidade, o Redis trabalha, basicamente, com dois tipos de processamento:
-
-
-
-
 
 1. **Armazenamento de valores chaves:**
 
@@ -45,7 +37,6 @@ Para ser capaz de funcionar com armazenamento em alta velocidade, o Redis trabal
    Já o armazenamento na memória torna a atividade mais rápida, uma vez que esse processamento **leva muito menos tempo do que em outras estruturas tradicionais**, como as que armazenam em discos rígidos.
 
    O desempenho mais dinâmico pode ser observado tanto em bancos de dados estruturados quanto desestruturados.
-
 
 ## Onde podemos aplicar o Redis em nosso ambiente empresarial
 
@@ -61,7 +52,6 @@ No geral, o Redis será útil em situações como:
 * caixas de comentários de [live streamings](https://rockcontent.com/br/blog/live-streaming/);
 * banco de dados de [chatbots](https://rockcontent.com/br/blog/chatbots/);
 * painéis que reproduzam feeds de mídias sociais.
-
 
 ### Streaming de mídia
 
@@ -81,7 +71,6 @@ O Redis também é altamente competente para **processar dados em tempo real**, 
 O [Machine Learning](https://rockcontent.com/br/blog/machine-learning/) é um campo da tecnologia focado em desenvolver em máquinas a capacidade de aprender com os dados aos quais são expostas. A partir disso, sistemas e softwares passam a entender como replicar essas informações nos momentos certos. Essa é a base para que a [Inteligência Artificial](https://rockcontent.com/br/blog/inteligencia-artificial/) funcione adequadamente em muitas ocasiões.
 
 Como o **volume de informações processados em Machine Learning é grande**, torna-se fundamental ter um banco de dados dinâmico e ágil como o Redis. Essa característica possibilita uma tomada de decisão mais rápida para oferecer respostas a partir do conteúdo que foi recebido pelo sistema.
-
 
 ## Quais os benefícios de utilizar o Redis?
 
@@ -119,7 +108,6 @@ Por conta de sua arquitetura, o Redis permite que as aplicações possam alcanç
 * **R;**
 * **Go.**
 
-
 ### **Performance de ponta**
 
 Para que um banco de dados tenha uma performance destacada, é essencial que ele consiga **processar dados em alta velocidade e, acima de tudo, simultaneamente**. O Redis é capaz de entregar isso devido ao fato de que não utiliza armazenamento em disco rígido, nem mesmo SSDs, que são muito mais ágeis. O armazenamento na memória é o grande fator diferencial nesse caso!
@@ -130,17 +118,13 @@ Aplicações de código aberto não são uma novidade e há muito tempo têm sid
 
 O Redis é um tipo de banco de dados que pode ser muito útil para aplicações com alta exigências de respostas rápidas e processamento dinâmico. Versátil, ele é capaz de manter um bom nível de desempenho no processamento e gerenciamento de dados, mesmo para as atividades que mais exigem de uma aplicação desse tipo. Em geral, é uma escolha certeira, focada em alto desempenho!
 
-
-Fonte: <https://rockcontent.com/br/blog/redis/>
+Fonte: [https://rockcontent.com/br/blog/redis/](https://rockcontent.com/br/blog/redis/)
 
 Autor: Ivan de Souza
 
 ## Instalação
 
 Para iniciarmos a utilização do banco de dados em memória Redis precisaremos seguir os seguintes passos
-
-
-
 
 1. Primeiramente precisaremos rodar uma imagem do servidor do banco de dados Redis Alpine executando o comando à seguir:
 
@@ -162,16 +146,13 @@ Para iniciarmos a utilização do banco de dados em memória Redis precisaremos 
    KEYS *
    ```
 
-
 ```
 MSET test "primeiro valor"
 ```
 
-
 ```
 MGET test
 ```
-
 
 4\. Para rodar o Redis com mais opções de configuração a sua instanciação via linha de comando ficará inviável, para isso podemos utilizar um arquivo docker-compose chamado "docker-compose-redis.yml" no qual podemos definir algumas configurações adicionais tais como inclusão de persistência e autenticação:
 
@@ -199,13 +180,11 @@ Nós estamos usando o parâmetro `--requirepass` para adicionar autenticação c
 
 Estamos também utilizando um volume para persistirmos em disco os dados do banco em uma pasta chamada "cache" no caso em que ocorra alguma falha em nosso container.
 
-
 Dito isto podemos rodar o arquivo docker-compose acima usando
 
 ```
 docker-compose -f docker-compose-redis.yml up
 ```
-
 
 O container instanciado após a execução do arquivo docker-compose é similar ao container instanciado anteriormente pela linha de comando. As duas maiores diferenças aqui são o volume montado para a persistência dos dados em disco e a senha definida para autenticação dentro do container.
 
@@ -239,9 +218,6 @@ No nosso caso aqui no treinamento focaremos na utilização do client para pytho
 
 O client python requer que o servidor do Redis esteja em execução. Vamos iniciar fazendo a instalação do client python seguindo os seguintes passos:
 
-
-
-
 1. Instalando o redis.py fazendo uso do gerenciador de pacotes "pip" do python:
 
    ```
@@ -254,18 +230,18 @@ O client python requer que o servidor do Redis esteja em execução. Vamos inici
    ```
 3. Vamos agora explorar alguns exemplos no próprio site do redis no seguinte endereço:
 
-   <https://redis-py.readthedocs.io/en/v4.2.0/examples.html>:
+   [https://redis-py.readthedocs.io/en/v4.2.0/examples.html](https://redis-py.readthedocs.io/en/v4.2.0/examples.html):
 4. Abordaremos aqui os mais usuais, são eles:
 
    SET( persistir estruturas simples no banco)
 
    \
+
    ```
    r.set('usuario','Marcos')
    # True
    ```
 
-   \
    GET( Recuperar dados do banco de dados)
 
    ```
@@ -273,7 +249,6 @@ O client python requer que o servidor do Redis esteja em execução. Vamos inici
    # Marcos
    ```
 
-   \
    EXISTS ( Verificar se determinada chave existe no banco de dados)
 
    ```
@@ -281,7 +256,6 @@ O client python requer que o servidor do Redis esteja em execução. Vamos inici
    # Marcos
    ```
 
-   \
    HSET( Para persistirmos e recuperarmos hashsets)
 
    ```
@@ -292,12 +266,11 @@ O client python requer que o servidor do Redis esteja em execução. Vamos inici
    	'idade':'32'
    })
    #True
-   
+
    r.hgetall('dados_usuario')
    # {'nome': 'João', 'Sobrenome':'Fernandes', 'empresa':'Google' 'idade':'32'}
    ```
 
-   \
    MSET(Para persistirmos dicionários com múltiplas chaves)
 
    ```bash
@@ -306,7 +279,7 @@ O client python requer que o servidor do Redis esteja em execução. Vamos inici
      "employee_age": 30,
      "position": "Software Engineer",
    }
-   
+
    r.mset(dict_data)
    ```
 5. Ao buscar por múltiplas chaves/valores se a referida chave não existir ou não for passada, Redis retornará “None” para o resultado:
@@ -316,13 +289,11 @@ r.mget("employee_name", "employee_age", "position", "non_existing")
 #['Adam Adams', '30', 'Software Engineer', None]
 ```
 
-
 Vamos verificar na própria documentação do Redis como criar índices e fazer queries:
 
-<https://redis-py.readthedocs.io/en/v4.2.0/examples/search_json_examples.html>
+[https://redis-py.readthedocs.io/en/v4.2.0/examples/search_json_examples.html](https://redis-py.readthedocs.io/en/v4.2.0/examples/search_json_examples.html)
 
-
-Podemos explorar alguns comandos de manipulação de dados que o Redis nos oferece em sua própria documentação em: <https://redis.io/docs/latest/commands/>
+Podemos explorar alguns comandos de manipulação de dados que o Redis nos oferece em sua própria documentação em: [https://redis.io/docs/latest/commands/](https://redis.io/docs/latest/commands/)
 
 ## Como podemos integrar o Redis com uma aplicação Flask
 
@@ -334,7 +305,6 @@ Para tanto teremos as seguintes entidades:
 * “Product”;
 * “Branch(Filial) e;
 * Purchase(Compra)
-
 
 ### Estrutura do Projeto
 
@@ -364,7 +334,6 @@ redis
 Flask-SQLAlchemy
 ```
 
-
 ### 2. Configuração do Banco de Dados no `config.py`
 
 ```javascript
@@ -380,7 +349,6 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 ```
-
 
 ### 3. Definição dos Modelos em `app/models.py`
 
@@ -422,7 +390,6 @@ class Purchase(db.Model):
     product = db.relationship('Product', backref=db.backref('purchases', lazy=True))
 ```
 
-
 ### 4. Vamos criar o arquivo `app/__init__.py`com o seguinte conteúdo
 
 ```markup
@@ -449,9 +416,19 @@ def create_app():
     return app
 ```
 
+5. Arquivo "run.py"
 
+   ```
+   from app import create_app
 
-5\. **Rotas e Lógica de Login:**
+   app = create_app()
+
+   if __name__ == '__main__':
+       app.run(debug=True)
+
+   ```
+
+6. **Rotas e Lógica de Login:**
 
 Adicione uma rota para login e armazene a filial do usuário na sessão.
 
@@ -464,13 +441,13 @@ def register_user():
     username = data.get('username')
     password = data.get('password')
     branch_id = data.get('branch_id')
-    
+  
     branch = Branch.query.get_or_404(branch_id)
-    
+  
     user = User(username=username, password=generate_password_hash(password), branch_id=branch_id)
     db.session.add(user)
     db.session.commit()
-    
+  
     return jsonify(message="User registered", user_id=user.id)
 
 @bp.route('/login', methods=['POST'])
@@ -505,36 +482,40 @@ def create_purchase():
     user_id = session.get('user_id')
     product_id = data.get('product_id')
     quantity = data.get('quantity')
-    
+  
     user = User.query.get_or_404(user_id)
     product = Product.query.get_or_404(product_id)
-    
+  
     if product.branch_id != branch_id:
         return jsonify(error="Unauthorized access"), 403
-    
+  
     purchase = Purchase(user_id=user_id, product_id=product_id, quantity=quantity)
     db.session.add(purchase)
     db.session.commit()
-    
+  
     return jsonify(message="Purchase created", purchase_id=purchase.id)
 ```
 
+### Execução da aplicação
+
+Instale as dependências:
+
+`pip install -r requirements.txt`
+
+Em seguida execute a aplicação:
+
+```
+python run.py
+```
 
 ### Explicação
-
-
-
 
 1. **Configuração da Sessão com Redis**: A configuração no `create_app` define a sessão para utilizar Redis como backend, armazenando as sessões no banco de dados Redis.
 2. **Rota** `/login`: Autentica o usuário, armazena o `user_id` e `branch_id` na sessão após o login.
 3. **Rota** `/products`: Consulta os produtos filtrando pela `branch_id` armazenada na sessão.
 4. **Rota** `/purchase`: Cria uma compra, garantindo que o usuário só pode comprar produtos da sua filial.
 
-
 ### Teste Completo
-
-
-
 
 1. **Registrar Múltiplos Tenants**:
 
@@ -559,13 +540,12 @@ def create_purchase():
 
 Essa abordagem garante que, após o login, as requisições subsequentes do usuário estarão restritas aos produtos e operações relacionadas à sua filial, utilizando a sessão armazenada no Redis para persistência dos dados de sessão.
 
+Referências:
 
-Referências: 
+[https://redis.io/docs/](https://redis.io/docs/)
 
-<https://redis.io/docs/>
+[https://geshan.com.np/blog/2022/01/redis-docker/](https://geshan.com.np/blog/2022/01/redis-docker/)
 
-<https://geshan.com.np/blog/2022/01/redis-docker/>
+[https://rockcontent.com/br/blog/redis/](https://rockcontent.com/br/blog/redis/)
 
-<https://rockcontent.com/br/blog/redis/>
-
-<https://redis-py.readthedocs.io/en/v4.2.0/redismodules.html>
+[https://redis-py.readthedocs.io/en/v4.2.0/redismodules.html](https://redis-py.readthedocs.io/en/v4.2.0/redismodules.html)
