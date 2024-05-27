@@ -416,7 +416,7 @@ def create_app():
     return app
 ```
 
-5. Arquivo "run.py"
+### 5. Arquivo "run.py"
 
    ```
    from app import create_app
@@ -428,7 +428,7 @@ def create_app():
 
    ```
 
-6. **Rotas e Lógica de Login:**
+### 6. **Rotas e Lógica de Login:**
 
 Adicione uma rota para login e armazene a filial do usuário na sessão.
 
@@ -496,7 +496,7 @@ def create_purchase():
     return jsonify(message="Purchase created", purchase_id=purchase.id)
 ```
 
-### Execução da aplicação
+### 7. Execução da aplicação:
 
 Instale as dependências:
 
